@@ -9,7 +9,7 @@ if(!instance_exists(activeAction)) {
 } else {
     switch(activeAction) {
     case "attack":
-        returnValue = AttackAction(character, cell.unit);
+        returnValue = AttackAction(character, cell);
         break;
     default:
         show_debug_message("CellClicked : action not recognized");

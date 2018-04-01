@@ -10,14 +10,22 @@ global.rOutline[2] = 0;
 global.rOutline[3] = 1;
 
 // Constants
+global.GRID_WIDTH = 8;
+global.GRID_HEIGHT = 8;
+global.CELL_SIZE = 35;
+
+// Status checks
 global.RETURN_OK = 0;
 global.RETURN_ERROR = 1;
 global.UNIT_EXISTS = -1;
 global.OUT_OF_RANGE = -2;
 
-    // Range checks
-    global.RANGE_MANHATTAN = 1;
-    global.RANGE_LINE = 2;
-    global.RANGE_JUMP_1 = 4;
-    
+// Range checks
+global.RANGE_MANHATTAN = 1;
+global.RANGE_LINE = 2;
+global.RANGE_JUMP_1 = 4;
+global.RANGE_DISTANCE = global.RANGE_MANHATTAN | global.RANGE_LINE | global.RANGE_JUMP_1;
+global.RANGE_MELEE = 8;
+global.RANGE_SELF = 16;
+global.RANGE_SQUARE = 32;
 

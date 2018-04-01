@@ -39,18 +39,19 @@
   <scripts name="scripts">
     <script>scripts\AddCharacter.gml</script>
     <script>scripts\CellClicked.gml</script>
+    <script>scripts\Globals.gml</script>
     <script>scripts\InitializeGrid.gml</script>
     <script>scripts\InitializeActionMenu.gml</script>
+    <script>scripts\IsAligned.gml</script>
+    <script>scripts\ManhattanDistance.gml</script>
     <script>scripts\NextCharacter.gml</script>
+    <script>scripts\RangeCheck.gml</script>
+    <script>scripts\SpawnCharacterInFight.gml</script>
     <scripts name="actions">
       <script>scripts\AttackAction.gml</script>
       <script>scripts\MoveAction.gml</script>
       <script>scripts\PassAction.gml</script>
     </scripts>
-    <script>scripts\Globals.gml</script>
-    <script>scripts\RangeCheck.gml</script>
-    <script>scripts\ManhattanDistance.gml</script>
-    <script>scripts\IsAligned.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\OutlineShader.shader</shader>
@@ -84,6 +85,12 @@
     <objects name="weapons">
       <object>objects\Weapon</object>
       <object>objects\Fist</object>
+      <object>objects\ZombieFist</object>
+      <object>objects\Bow</object>
+      <object>objects\Axe</object>
+      <object>objects\Bat</object>
+      <object>objects\Pipe</object>
+      <object>objects\Knife</object>
     </objects>
     <object>objects\GlobalsInitializer</object>
   </objects>

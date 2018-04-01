@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>damage = 0;
+            <string>self.damage = 0;
+self.range = 0;
+self.rangeType = noone;
+
 </string>
           </argument>
         </arguments>

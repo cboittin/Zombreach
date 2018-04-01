@@ -33,7 +33,8 @@ texelH = texture_get_texel_height(sprite_get_texture(sprite_index, 0));
 
 self.hasMoved = false;
 self.active = false;
-//self.hp = 2;
+self.hp = 2;
+self.weapon = instance_create(0, 0, Fist);
 
 self.actions = ds_list_create();
 ds_list_add(self.actions, Attack);

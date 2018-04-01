@@ -29,12 +29,14 @@
 self.hp = 1;
 self.hovered = false;
 self.movement = 3;
+self.weapon = noone;
 
 // Shader variables
 u_outlineSize = shader_get_uniform(OutlineShader, "outlineSize");
 u_texelWidth = shader_get_uniform(OutlineShader, "texelWidth");
 u_texelHeight = shader_get_uniform(OutlineShader, "texelHeight");
 u_outlineColor = shader_get_uniform(OutlineShader, "outlineColor");
+
 </string>
           </argument>
         </arguments>

@@ -29,7 +29,6 @@
 self.damage = 1;
 self.range = 1;
 self.rangeType = global.RANGE_MELEE;
-
 </string>
           </argument>
         </arguments>

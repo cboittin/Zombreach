@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>999</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,18 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>GRID_WIDTH = 8;
-GRID_HEIGHT = 8;
-
-var cellW = sprite_get_width(CellSprite);
+            <string>var cellW = sprite_get_width(CellSprite);
 var cellH = sprite_get_height(CellSprite);
 var cellX, cellY;
+hoveredCell = noone;
 
+// Create cells
 var i, j;
 var cell;
-for(i = 0; i &lt; GRID_WIDTH; i += 1)
+for(i = 0; i &lt; global.GRID_WIDTH; i += 1)
 {
-    for (j = 0; j &lt; GRID_HEIGHT; j += 1)
+    for (j = 0; j &lt; global.GRID_HEIGHT; j += 1)
     {
         cellX = self.x + i * cellW;
         cellY = self.y + j * cellH;
@@ -46,6 +45,75 @@ for(i = 0; i &lt; GRID_WIDTH; i += 1)
         cell.indexY = j;
         cell.parent = self;
     }
+}
+
+// Pathfinding
+self.pathfinder = mp_grid_create(30, 0, global.GRID_HEIGHT, global.GRID_WIDTH, 
+                          global.CELL_SIZE, global.CELL_SIZE); // FIXME grid position
+self.currentPath = path_add();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(instance_exists(self.hoveredCell)) {
+    origin = self.state.activeCharacter;
+    destination = self.hoveredCell;
+    if( !instance_exists(destination.unit)
+            &amp;&amp; ManhattanDistance(origin.cell, destination) &lt;= origin.movement ) {
+        
+        mp_grid_clear_cell(self.pathfinder, origin.cell.indexX, origin.cell.indexY);
+        mp_grid_path(self.pathfinder, self.currentPath, origin.x, origin.y, 
+                destination.centerX, destination.centerY, false)
+        mp_grid_add_instances(self.pathfinder, origin, false);
+    } else
+        path_clear_points(self.currentPath);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(instance_exists(self.currentPath)) {
+    with(self.state.activeCharacter) {
+        draw_path(other.currentPath, x, y, false);
+        show_debug_message("Drawing path");
+    }
+    
 }
 </string>
           </argument>
