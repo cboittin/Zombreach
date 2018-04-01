@@ -35,3 +35,16 @@ global.CH_ZOMBIE = 1;
 global.CH_NPC_ALLY = 2;
 global.CH_NPC_ENEMY = 3;
 
+// Event types
+global.EVENT_MOVEMENT = 0;
+global.EVENT_MOVEMENT_LOUD = 1;
+global.EVENT_ATTACK = 2;
+global.EVENT_ATTACK_LOUD = 3;
+global.EVENT_GUNFIRE = 4;
+global.EVENT_BREAK = 5;
+global.EVENT_BREAK_LOUD = 6;
+global.EVENT_ACTION = 7;
+global.EVENT_ACTION8LOUD = 8;
+
+
+

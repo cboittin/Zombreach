@@ -42,6 +42,7 @@ for(i = 0; i < areaInfo.nZombies; i += 1) {
     ds_list_add(positionsY, zY);
     zombie = instance_create(0, 0, Zombie);
     SpawnCharacterInFight(zombie, grid, zX, zY);
+    ds_list_add(state.npcs, zombie);
 }
 ds_list_destroy(positionsX);
 ds_list_destroy(positionsY);

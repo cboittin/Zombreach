@@ -19,11 +19,7 @@ with(character) {
     
     tooFar = false;
     if(pathExists && (path_get_length(path) / global.CELL_SIZE) <= movement) {
-        cell.unit = noone;
-        cell = destination;
-        destination.unit = self;
-        x = destination.centerX;
-        y = destination.centerY;
+        MoveCharacter(self, destination);
     } else {
         tooFar = true;
     }

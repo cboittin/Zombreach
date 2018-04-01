@@ -2,6 +2,8 @@ cell = argument0;
 state = argument1.state;
 
 character = state.activeCharacter;
+if(!instance_exists(state.activeCharacter))
+    return;
 activeAction = state.actionMenu.activeAction;
 returnValue = noone;
 if(!instance_exists(activeAction)) {

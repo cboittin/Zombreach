@@ -84,21 +84,27 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\AddCharacter.gml</script>
-    <script>scripts\CellClicked.gml</script>
     <script>scripts\Globals.gml</script>
-    <script>scripts\InitializeGrid.gml</script>
-    <script>scripts\InitializeActionMenu.gml</script>
     <script>scripts\IsAligned.gml</script>
     <script>scripts\ManhattanDistance.gml</script>
-    <script>scripts\NextCharacter.gml</script>
-    <script>scripts\RangeCheck.gml</script>
-    <script>scripts\SpawnCharacterInFight.gml</script>
     <scripts name="actions">
       <script>scripts\AttackAction.gml</script>
       <script>scripts\MoveAction.gml</script>
       <script>scripts\PassAction.gml</script>
     </scripts>
-    <script>scripts\DealDamage.gml</script>
+    <scripts name="fight">
+      <script>scripts\CellClicked.gml</script>
+      <script>scripts\DealDamage.gml</script>
+      <script>scripts\EndOfTurn.gml</script>
+      <script>scripts\InitializeActionMenu.gml</script>
+      <script>scripts\InitializeGrid.gml</script>
+      <script>scripts\NextCharacter.gml</script>
+      <script>scripts\PlayNPCs.gml</script>
+      <script>scripts\RangeCheck.gml</script>
+      <script>scripts\SpawnCharacterInFight.gml</script>
+      <script>scripts\MoveCharacter.gml</script>
+      <script>scripts\CalculateNoise.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\OutlineShader.shader</shader>
@@ -140,6 +146,10 @@
       <object>objects\Knife</object>
     </objects>
     <object>objects\GlobalsInitializer</object>
+    <objects name="events">
+      <object>objects\EventBase</object>
+      <object>objects\MovementEvent</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>

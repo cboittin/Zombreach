@@ -25,27 +25,52 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>grid = instance_create(30, 0, FightGrid);
-actionMenu = instance_create(0, 280, ActionMenu);
-party = instance_create(310, 0, Party);
-areaInfo = instance_create(0, 0, AreaInfo);
+            <string>self.grid = instance_create(30, 0, FightGrid);
+self.actionMenu = instance_create(0, 280, ActionMenu);
+self.party = instance_create(310, 0, Party);
+self.areaInfo = instance_create(0, 0, AreaInfo);
 
-grid.state = self;
-actionMenu.state = self;
-party.state = self;
+self.grid.state = self;
+self.actionMenu.state = self;
+self.party.state = self;
 
-nActiveChars = party.nCharacters;
-activeCharacter = noone;
+self.nActiveChars = party.nCharacters;
+self.activeCharacter = noone;
 
-InitializeGrid(self, areaInfo);
+self.npcs = ds_list_create();
 
-charIndex = irandom(nActiveChars - 1);
-activeCharacter = party.characters[charIndex];
-activeCharacter.active = true;
-activeCharacterIndex = 0;
+InitializeGrid(self, self.areaInfo);
 
-InitializeActionMenu(actionMenu, self);
+self.charIndex = irandom(nActiveChars - 1);
+self.activeCharacter = party.characters[charIndex];
+self.activeCharacter.active = true;
+self.activeCharacterIndex = 0;
 
+InitializeActionMenu(self.actionMenu, self);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ds_list_destroy(self.enemies);
 </string>
           </argument>
         </arguments>

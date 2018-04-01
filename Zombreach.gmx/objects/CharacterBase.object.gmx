@@ -32,6 +32,7 @@ self.movement = 3;
 self.weapon = noone;
 self.characterType = noone;
 self.deadSprite = noone;
+self.hasToDie = false;
 
 self.path = path_add();
 path_set_kind(self.path, 0);
@@ -42,6 +43,35 @@ u_texelWidth = shader_get_uniform(OutlineShader, "texelWidth");
 u_texelHeight = shader_get_uniform(OutlineShader, "texelHeight");
 u_outlineColor = shader_get_uniform(OutlineShader, "outlineColor");
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(self.hasToDie == true) {
+    if(instance_exists(self.deadSprite)) {
+        sprite_index = self.deadSprite;
+    } else {
+        instance_destroy();
+    }
+}
 </string>
           </argument>
         </arguments>

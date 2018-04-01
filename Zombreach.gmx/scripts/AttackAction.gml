@@ -7,7 +7,7 @@ if(!RangeCheck(character.cell, targetCell, weapon.range, weapon.rangeType))
 
 unit = targetCell.unit
 if(instance_exists(unit))
-    unit.hp -= weapon.damage;
+    DealDamage(character, unit, weapon.damage);
 else
     show_debug_message("AttackAction : targeted an empty cell");
 
