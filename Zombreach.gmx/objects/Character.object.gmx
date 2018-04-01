@@ -39,7 +39,6 @@ self.weapon = instance_create(0, 0, Fist);
 self.actions = ds_list_create();
 ds_list_add(self.actions, Attack);
 ds_list_add(self.actions, Pass);
-
 </string>
           </argument>
         </arguments>
@@ -63,6 +62,7 @@ ds_list_add(self.actions, Pass);
           <argument>
             <kind>1</kind>
             <string>ds_list_destroy(self.actions);
+path_delete(self.path);
 </string>
           </argument>
         </arguments>

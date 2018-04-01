@@ -51,6 +51,9 @@ for(i = 0; i &lt; global.GRID_WIDTH; i += 1)
 self.pathfinder = mp_grid_create(30, 0, global.GRID_HEIGHT, global.GRID_WIDTH, 
                           global.CELL_SIZE, global.CELL_SIZE); // FIXME grid position
 self.currentPath = path_add();
+path_set_kind(self.currentPath, 1);
+path_set_precision(self.currentPath, 8);
+
 </string>
           </argument>
         </arguments>
@@ -83,9 +86,13 @@ self.currentPath = path_add();
         mp_grid_path(self.pathfinder, self.currentPath, origin.x, origin.y, 
                 destination.centerX, destination.centerY, false)
         mp_grid_add_instances(self.pathfinder, origin, false);
+        
+        if(path_get_length(self.currentPath) / global.CELL_SIZE &gt; origin.movement)
+            path_clear_points(self.currentPath);  
     } else
         path_clear_points(self.currentPath);
 }
+
 </string>
           </argument>
         </arguments>
@@ -111,7 +118,6 @@ self.currentPath = path_add();
             <string>if(instance_exists(self.currentPath)) {
     with(self.state.activeCharacter) {
         draw_path(other.currentPath, x, y, false);
-        show_debug_message("Drawing path");
     }
     
 }
