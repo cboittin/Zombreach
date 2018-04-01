@@ -29,3 +29,9 @@ global.RANGE_MELEE = 8;
 global.RANGE_SELF = 16;
 global.RANGE_SQUARE = 32;
 
+// Character types
+global.CH_PLAYABLE = 0;
+global.CH_ZOMBIE = 1;
+global.CH_NPC_ALLY = 2;
+global.CH_NPC_ENEMY = 3;
+

@@ -27,9 +27,31 @@
             <kind>1</kind>
             <string>event_inherited();
 
-sprite_index = Zombie1Sprite;
+r = irandom(2);
+switch(r) {
+case 0:
+    sprite_index = Zombie1;
+    self.deadSprite = Zombie1Dead;
+    break;
+case 1:
+    sprite_index = Zombie2;
+    self.deadSprite = Zombie2Dead;
+    break;
+case 2:
+    sprite_index = Zombie3;
+    self.deadSprite = Zombie3Dead;
+    break;
+}
+
 texelW = texture_get_texel_width(sprite_get_texture(sprite_index, 0));
 texelH = texture_get_texel_height(sprite_get_texture(sprite_index, 0));
+
+
+self.characterType = global.CH_ZOMBIE;
+self.stunned = false;
+
+
+
 
 self.weapon = instance_create(0, 0, Fist);
 

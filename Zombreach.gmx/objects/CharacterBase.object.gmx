@@ -30,6 +30,8 @@ self.hp = 1;
 self.hovered = false;
 self.movement = 3;
 self.weapon = noone;
+self.characterType = noone;
+self.deadSprite = noone;
 
 self.path = path_add();
 path_set_kind(self.path, 0);

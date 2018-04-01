@@ -27,7 +27,25 @@
             <kind>1</kind>
             <string>event_inherited();
 
-sprite_index = Character1;
+r = irandom(3);
+switch(r) {
+case 0:
+    sprite_index = Character1;
+    self.deadSprite = Character1Dead;
+    break;
+case 1:
+    sprite_index = Character2;
+    self.deadSprite = Character2Dead;
+    break;
+case 2:
+    sprite_index = Character3;
+    self.deadSprite = Character3Dead;
+    break;
+case 3:
+    sprite_index = Character4;
+    self.deadSprite = Character4Dead;
+    break;
+}
 texelW = texture_get_texel_width(sprite_get_texture(sprite_index, 0));
 texelH = texture_get_texel_height(sprite_get_texture(sprite_index, 0));
 
@@ -35,6 +53,7 @@ self.hasMoved = false;
 self.active = false;
 self.hp = 2;
 self.weapon = instance_create(0, 0, Fist);
+self.characterType = global.CH_PLAYABLE;
 
 self.actions = ds_list_create();
 ds_list_add(self.actions, Attack);

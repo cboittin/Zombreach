@@ -25,14 +25,60 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\StartButtonSprite</sprite>
-    <sprite>sprites\CellSprite</sprite>
-    <sprite>sprites\Zombie1Sprite</sprite>
-    <sprite>sprites\Character1</sprite>
-    <sprite>sprites\EmptyPortrait</sprite>
-    <sprite>sprites\ActionButton</sprite>
-    <sprite>sprites\AttackSprite</sprite>
-    <sprite>sprites\PassSprite</sprite>
+    <sprites name="characters">
+      <sprite>sprites\Character1</sprite>
+      <sprite>sprites\Character2</sprite>
+      <sprite>sprites\Character3</sprite>
+      <sprite>sprites\Character4</sprite>
+      <sprite>sprites\Character1Dead</sprite>
+      <sprite>sprites\Character2Dead</sprite>
+      <sprite>sprites\Character3Dead</sprite>
+      <sprite>sprites\Character4Dead</sprite>
+      <sprite>sprites\Zombie1</sprite>
+      <sprite>sprites\Zombie2</sprite>
+      <sprite>sprites\Zombie3</sprite>
+      <sprite>sprites\Zombie1Dead</sprite>
+      <sprite>sprites\Zombie2Dead</sprite>
+      <sprite>sprites\Zombie3Dead</sprite>
+    </sprites>
+    <sprites name="GUI">
+      <sprite>sprites\ActionButton</sprite>
+      <sprite>sprites\AttackSprite</sprite>
+      <sprite>sprites\CellSprite</sprite>
+      <sprite>sprites\Layout</sprite>
+      <sprite>sprites\PassSprite</sprite>
+      <sprite>sprites\StartButtonSprite</sprite>
+    </sprites>
+    <sprites name="background">
+      <sprite>sprites\StreetBackGround</sprite>
+      <sprite>sprites\BinBaseSprite</sprite>
+      <sprite>sprites\BinLidSprite</sprite>
+      <sprite>sprites\GratingSprite</sprite>
+      <sprite>sprites\CarBlue</sprite>
+      <sprite>sprites\CarGreen</sprite>
+      <sprite>sprites\CarRed</sprite>
+      <sprite>sprites\CarYellow</sprite>
+    </sprites>
+    <sprites name="party">
+      <sprite>sprites\EmptyPortrait</sprite>
+      <sprite>sprites\Face1</sprite>
+      <sprite>sprites\Face2</sprite>
+      <sprite>sprites\Face3</sprite>
+      <sprite>sprites\Face4</sprite>
+    </sprites>
+    <sprites name="weapons">
+      <sprite>sprites\AxeEquipped</sprite>
+      <sprite>sprites\AxeSprite</sprite>
+      <sprite>sprites\BatEquipped</sprite>
+      <sprite>sprites\BatSprite</sprite>
+      <sprite>sprites\KnifeEquipped</sprite>
+      <sprite>sprites\KnifeSprite</sprite>
+      <sprite>sprites\PipeEquipped</sprite>
+      <sprite>sprites\PipeSprite</sprite>
+    </sprites>
+    <sprites name="status">
+      <sprite>sprites\HPSpriteSheet</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -52,6 +98,7 @@
       <script>scripts\MoveAction.gml</script>
       <script>scripts\PassAction.gml</script>
     </scripts>
+    <script>scripts\DealDamage.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\OutlineShader.shader</shader>
