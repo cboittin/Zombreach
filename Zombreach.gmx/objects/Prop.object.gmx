@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>self.action = noone;
 self.cell = noone;
-
+self.propType = -1;
 </string>
           </argument>
         </arguments>

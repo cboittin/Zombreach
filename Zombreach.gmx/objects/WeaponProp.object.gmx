@@ -28,6 +28,8 @@
             <string>event_inherited();
 self.action = Grab;
 self.weapon = noone;
+self.propType = global.PROP_WEAPON;
+
 </string>
           </argument>
         </arguments>

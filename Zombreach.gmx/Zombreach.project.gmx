@@ -86,6 +86,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\AddCharacterToParty.gml</script>
+    <script>scripts\AddProp.gml</script>
     <script>scripts\Globals.gml</script>
     <script>scripts\IsAligned.gml</script>
     <script>scripts\ManhattanDistance.gml</script>
@@ -93,6 +94,8 @@
       <script>scripts\AttackAction.gml</script>
       <script>scripts\MoveAction.gml</script>
       <script>scripts\PassAction.gml</script>
+      <script>scripts\GrabAction.gml</script>
+      <script>scripts\ThrowAction.gml</script>
     </scripts>
     <scripts name="fight">
       <script>scripts\CalculateNoise.gml</script>

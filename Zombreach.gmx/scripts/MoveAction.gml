@@ -28,3 +28,4 @@ with(character) {
 }
 character.hasMoves = true;
 return global.RETURN_OK;
+

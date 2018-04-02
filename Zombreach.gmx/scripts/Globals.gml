@@ -46,5 +46,16 @@ global.EVENT_BREAK_LOUD = 6;
 global.EVENT_ACTION = 7;
 global.EVENT_ACTION8LOUD = 8;
 
+// Prop types
+global.PROP_WEAPON = 1;
+global.PROP_COLLECTIBLE = 2;
+global.PROP_FURNITURE = 4;
 
+global.PROP_DESTRUCTIBLE = global.PROP_FURNITURE;
+global.PROP_GRABBABLE = global.PROP_WEAPON | global.PROP_COLLECTIBLE;
+
+// Weapon types
+global.WEAPON_FIST = 0;
+global.WEAPON_THROWABLE = 1;
+global.WEAPON_USE_AMMO = 2;
 
