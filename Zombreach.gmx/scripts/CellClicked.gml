@@ -3,7 +3,7 @@ state = argument1.state;
 
 character = state.activeCharacter;
 if(!instance_exists(state.activeCharacter))
-    return;
+    return 0;
 activeAction = state.actionMenu.activeAction;
 returnValue = noone;
 if(!instance_exists(activeAction)) {
@@ -31,3 +31,4 @@ else
         break;
     default:
     }
+

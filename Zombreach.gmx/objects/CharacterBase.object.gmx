@@ -32,7 +32,7 @@ self.movement = 3;
 self.weapon = noone;
 self.characterType = noone;
 self.deadSprite = noone;
-self.hasToDie = false;
+self.dead = false;
 
 self.path = path_add();
 path_set_kind(self.path, 0);
@@ -65,7 +65,7 @@ u_outlineColor = shader_get_uniform(OutlineShader, "outlineColor");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(self.hasToDie == true) {
+            <string>if(self.dead == true) {
     if(instance_exists(self.deadSprite)) {
         sprite_index = self.deadSprite;
     } else {

@@ -83,7 +83,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\AddCharacter.gml</script>
+    <script>scripts\AddCharacterToParty.gml</script>
     <script>scripts\Globals.gml</script>
     <script>scripts\IsAligned.gml</script>
     <script>scripts\ManhattanDistance.gml</script>
@@ -110,8 +110,8 @@
     <shader type="GLSLES">shaders\OutlineShader.shader</shader>
   </shaders>
   <objects name="objects">
-    <object>objects\Party</object>
-    <object>objects\CharacterPortrait</object>
+    <object>objects\GameState</object>
+    <object>objects\GlobalsInitializer</object>
     <objects name="actions">
       <object>objects\Attack</object>
       <object>objects\Pass</object>
@@ -134,7 +134,6 @@
     <objects name="world">
       <object>objects\AreaInfo</object>
     </objects>
-    <object>objects\GameState</object>
     <objects name="weapons">
       <object>objects\Weapon</object>
       <object>objects\Fist</object>
@@ -145,10 +144,14 @@
       <object>objects\Pipe</object>
       <object>objects\Knife</object>
     </objects>
-    <object>objects\GlobalsInitializer</object>
     <objects name="events">
       <object>objects\EventBase</object>
       <object>objects\MovementEvent</object>
+    </objects>
+    <objects name="party">
+      <object>objects\Party</object>
+      <object>objects\CharacterPortrait</object>
+      <object>objects\PartySlot</object>
     </objects>
   </objects>
   <rooms name="rooms">

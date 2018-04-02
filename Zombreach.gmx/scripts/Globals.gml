@@ -1,6 +1,6 @@
 // Colors
-global.yOutline[0] = 0.8;
-global.yOutline[1] = 0.8;
+global.yOutline[0] = 0.7;
+global.yOutline[1] = 0.7;
 global.yOutline[2] = 0;
 global.yOutline[3] = 1;
 

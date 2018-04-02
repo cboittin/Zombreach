@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = Character1;
+            <string>r = irandom(3);
+switch(r) {
+case 0:  sprite_index = Face1; break;
+case 1:  sprite_index = Face2; break;
+case 2:  sprite_index = Face3; break;
+case 3:  sprite_index = Face4; break;
+}
+
+
 </string>
           </argument>
         </arguments>

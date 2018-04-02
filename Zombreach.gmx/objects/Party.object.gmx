@@ -25,14 +25,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>characters[0] = instance_create(0, 0, Character);
-characters[1] = instance_create(0, 0, Character);
-characters[2] = noone;
-characters[3] = noone;
+            <string>self.partySlot[0] = instance_create(x + 26, 36, PartySlot);
+self.partySlot[1] = instance_create(x + 26, 108, PartySlot);
+self.partySlot[2] = instance_create(x + 26, 180, PartySlot);
+self.partySlot[3] = instance_create(x + 26, 252, PartySlot);
 
-nCharacters = 2;
+c1 = instance_create(0, 0, Character);
+self.partySlot[0].character = c1;
+c2 = instance_create(0, 0, Character);
+self.partySlot[1].character = c2;
+
+c1.portrait.x = self.partySlot[0].x
+c1.portrait.y = self.partySlot[0].y
+c2.portrait.x = self.partySlot[1].x
+c2.portrait.y = self.partySlot[1].y
+
+self.characters[0] = c1;
+self.characters[1] = c2;
+self.characters[2] = noone;
+self.characters[3] = noone;
+
+self.nCharacters = 2;
 
 font = font_add("steelfis.ttf", 16, false, false, 32, 128);
+
 </string>
           </argument>
         </arguments>
@@ -78,18 +94,28 @@ font = font_add("steelfis.ttf", 16, false, false, 32, 128);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>curY = y;
+            <string>/*curY = y;
 curX = x + 10;
 for(var i = 0; i &lt; 4; i += 1) {
+    character = characters[i];
     // Draw character portrait and info
-    portrait = instance_create(curX + 16, curY + 36, CharacterPortrait);
-    if(characters[i] == pointer_null) {
+    if(instance_exists(character)) {
+        portrait = character.portrait;
+        if(instance_exists(portrait)) {
+            portrait = self.characters[i].portrait;
+            portrait.x = curX + 16;
+            portrait.y = curY + 36;
+            drawPortrait = true;
+        }
+    } 
+    if(drawPortrait == false) {
         portrait.sprite_index = EmptyPortrait;
         portrait.x_scale = 32 / 35;
         portrait.y_scale = 32 / 35;
     }
     curY += 72;
 }
+*/
 </string>
           </argument>
         </arguments>
