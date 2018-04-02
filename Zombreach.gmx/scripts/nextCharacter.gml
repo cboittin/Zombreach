@@ -1,4 +1,4 @@
-state = argument0;
+var state = argument0;
 
 state.activeCharacter.active = false;
 state.activeCharacter = noone;
@@ -10,4 +10,6 @@ if(state.activeCharacterIndex >= state.nActiveChars) {
 }
 state.activeCharacter.active = true;
 state.actionMenu.activeAction = noone;
+
+InitializeActionMenu(state);
 

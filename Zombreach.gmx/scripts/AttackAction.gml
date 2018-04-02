@@ -1,11 +1,11 @@
-character = argument0;
-targetCell = argument1;
+var character = argument0;
+var targetCell = argument1;
 
-weapon = character.weapon;
+var weapon = character.weapon;
 if(!RangeCheck(character.cell, targetCell, weapon.range, weapon.rangeType))
     return global.OUT_OF_RANGE;
 
-unit = targetCell.unit
+var unit = targetCell.unit
 if(instance_exists(unit))
     DealDamage(character, unit, weapon.damage);
 else

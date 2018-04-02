@@ -30,9 +30,9 @@ self.partySlot[1] = instance_create(x + 26, 108, PartySlot);
 self.partySlot[2] = instance_create(x + 26, 180, PartySlot);
 self.partySlot[3] = instance_create(x + 26, 252, PartySlot);
 
-c1 = instance_create(0, 0, Character);
+var c1 = instance_create(0, 0, Character);
 self.partySlot[0].character = c1;
-c2 = instance_create(0, 0, Character);
+var c2 = instance_create(0, 0, Character);
 self.partySlot[1].character = c2;
 
 c1.portrait.x = self.partySlot[0].x
@@ -47,7 +47,7 @@ self.characters[3] = noone;
 
 self.nCharacters = 2;
 
-font = font_add("steelfis.ttf", 16, false, false, 32, 128);
+self.font = font_add("steelfis.ttf", 16, false, false, 32, 128);
 
 </string>
           </argument>
@@ -138,8 +138,8 @@ for(var i = 0; i &lt; 4; i += 1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>curY = y;
-curX = x + 10;
+            <string>var curY = y;
+var curX = x + 10;
 draw_set_colour(c_black);
 draw_set_font(font);
 texture_set_interpolation(true);

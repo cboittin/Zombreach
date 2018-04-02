@@ -71,6 +71,7 @@
       <sprite>sprites\AxeSprite</sprite>
       <sprite>sprites\BatEquipped</sprite>
       <sprite>sprites\BatSprite</sprite>
+      <sprite>sprites\BowSprite</sprite>
       <sprite>sprites\KnifeEquipped</sprite>
       <sprite>sprites\KnifeSprite</sprite>
       <sprite>sprites\PipeEquipped</sprite>
@@ -79,6 +80,7 @@
     <sprites name="status">
       <sprite>sprites\HPSpriteSheet</sprite>
     </sprites>
+    <sprite>sprites\GrabSprite</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -93,6 +95,7 @@
       <script>scripts\PassAction.gml</script>
     </scripts>
     <scripts name="fight">
+      <script>scripts\CalculateNoise.gml</script>
       <script>scripts\CellClicked.gml</script>
       <script>scripts\DealDamage.gml</script>
       <script>scripts\EndOfTurn.gml</script>
@@ -101,9 +104,9 @@
       <script>scripts\NextCharacter.gml</script>
       <script>scripts\PlayNPCs.gml</script>
       <script>scripts\RangeCheck.gml</script>
+      <script>scripts\SpawnProp.gml</script>
       <script>scripts\SpawnCharacterInFight.gml</script>
       <script>scripts\MoveCharacter.gml</script>
-      <script>scripts\CalculateNoise.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
@@ -116,6 +119,7 @@
       <object>objects\Attack</object>
       <object>objects\Pass</object>
       <object>objects\ActionBase</object>
+      <object>objects\Grab</object>
     </objects>
     <objects name="buttons">
       <object>objects\StartButton</object>
@@ -152,6 +156,11 @@
       <object>objects\Party</object>
       <object>objects\CharacterPortrait</object>
       <object>objects\PartySlot</object>
+    </objects>
+    <objects name="props">
+      <object>objects\Prop</object>
+      <object>objects\WeaponProp</object>
+      <object>objects\BowProp</object>
     </objects>
   </objects>
   <rooms name="rooms">

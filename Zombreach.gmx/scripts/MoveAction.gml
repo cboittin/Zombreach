@@ -1,9 +1,8 @@
-character = argument0;
-destination = argument1;
+var character = argument0;
+var destination = argument1;
 
 with(character) {
-    destination = other.destination;
-    pathfinder = destination.parent.pathfinder;
+    var pathfinder = destination.parent.pathfinder;
     
     // Easy checks
     if(instance_exists(destination.unit))
@@ -14,10 +13,10 @@ with(character) {
     // Pathfinding
     mp_grid_clear_cell(pathfinder, cell.indexX, cell.indexY);
     path_clear_points(path);
-    pathExists = mp_grid_path(pathfinder, path, x, y, 
+    var pathExists = mp_grid_path(pathfinder, path, x, y, 
         destination.centerX, destination.centerY, false);
     
-    tooFar = false;
+    var tooFar = false;
     if(pathExists && (path_get_length(path) / global.CELL_SIZE) <= movement) {
         MoveCharacter(self, destination);
     } else {
@@ -27,4 +26,5 @@ with(character) {
     if(tooFar)
         return global.OUT_OF_RANGE;
 }
+character.hasMoves = true;
 return global.RETURN_OK;

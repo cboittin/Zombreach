@@ -1,9 +1,9 @@
-cell1 = argument0;
-cell2 = argument1;
-maxRange = argument2;
-rangeType = argument3;
+var cell1 = argument0;
+var cell2 = argument1;
+var maxRange = argument2;
+var rangeType = argument3;
 
-distance = ManhattanDistance(cell1, cell2);
+var distance = ManhattanDistance(cell1, cell2);
 if(rangeType & global.RANGE_DISTANCE && distance > maxRange)
     return false;
 if(rangeType & global.RANGE_LINE && !IsAligned(cell1, cell2))

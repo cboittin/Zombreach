@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>nZombies = 5;
+            <string>self.nZombies = 5;
+self.nProps = 4;
+
 </string>
           </argument>
         </arguments>

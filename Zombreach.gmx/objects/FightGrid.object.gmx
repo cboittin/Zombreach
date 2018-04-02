@@ -28,7 +28,7 @@
             <string>var cellW = sprite_get_width(CellSprite);
 var cellH = sprite_get_height(CellSprite);
 var cellX, cellY;
-hoveredCell = noone;
+self.hoveredCell = noone;
 
 // Create cells
 var i, j;
@@ -77,8 +77,8 @@ path_set_precision(self.currentPath, 8);
           <argument>
             <kind>1</kind>
             <string>if(instance_exists(self.hoveredCell)) {
-    origin = self.state.activeCharacter;
-    destination = self.hoveredCell;
+    var origin = self.state.activeCharacter;
+    var destination = self.hoveredCell;
     if( !instance_exists(destination.unit)
             &amp;&amp; ManhattanDistance(origin.cell, destination) &lt;= origin.movement ) {
         

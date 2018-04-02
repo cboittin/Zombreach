@@ -1,18 +1,18 @@
-state = argument0;
-areaInfo = argument1;
-grid = state.grid;
-party = state.party;
+var state = argument0;
+var areaInfo = argument1;
+var grid = state.grid;
+var party = state.party;
 
-startX = round(global.GRID_WIDTH / 4);
-startY = round(global.GRID_HEIGHT * .66);
-diffY = global.GRID_HEIGHT - startY;
+var startX = round(global.GRID_WIDTH / 4);
+var startY = round(global.GRID_HEIGHT * .66);
+var diffY = global.GRID_HEIGHT - startY;
 if(diffY mod 2 == 1) {
     startY += 1;
     diffY -= 1;
 }
 
-enemyX = floor(global.GRID_WIDTH / 2);
-diffX = global.GRID_WIDTH - enemyX;
+var enemyX = floor(global.GRID_WIDTH / 2);
+var diffX = global.GRID_WIDTH - enemyX;
 
 // Initialize player positions
 var i;
@@ -32,18 +32,37 @@ var positionsX = ds_list_create();
 var positionsY = ds_list_create();
 show_debug_message("nZombies " + string(areaInfo.nZombies));
 for(i = 0; i < areaInfo.nZombies; i += 1) {
-    zX = diffX + irandom(enemyX - 1);
-    zY = irandom(global.GRID_HEIGHT - 1);
+    var zX = diffX + irandom(enemyX - 1);
+    var zY = irandom(global.GRID_HEIGHT - 1);
     while(ds_list_find_index(positionsX, zX) != -1 && ds_list_find_index(positionsY, zY) != -1) {
         zX = diffX + irandom(enemyX - 1);
         zY = irandom(global.GRID_HEIGHT - 1);
     }
     ds_list_add(positionsX, zX);
     ds_list_add(positionsY, zY);
-    zombie = instance_create(0, 0, Zombie);
+    var zombie = instance_create(0, 0, Zombie);
     SpawnCharacterInFight(zombie, grid, zX, zY);
     ds_list_add(state.npcs, zombie);
 }
+ds_list_clear(positionsX);
+ds_list_clear(positionsY);
+
+// Initialize props
+var positionsX = ds_list_create();
+var positionsY = ds_list_create();
+for(i = 0; i < areaInfo.nProps; i += 1) {
+    var pX = irandom(global.GRID_WIDTH - 1);
+    var pY = irandom(global.GRID_HEIGHT - 1);
+    while(ds_list_find_index(positionsX, pX) != -1 && ds_list_find_index(positionsY, pY) != -1) {
+        var pX = irandom(global.GRID_WIDTH - 1);
+        var pY = irandom(global.GRID_HEIGHT - 1);
+    }
+    ds_list_add(positionsX, pX);
+    ds_list_add(positionsY, pY);
+    var prop = instance_create(0, 0, BowProp);
+    SpawnProp(prop, grid, pX, pY);
+}
 ds_list_destroy(positionsX);
 ds_list_destroy(positionsY);
+
 

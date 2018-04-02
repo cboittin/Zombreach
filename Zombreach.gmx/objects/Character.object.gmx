@@ -28,7 +28,7 @@
             <string>event_inherited();
 
 // Sprite
-r = irandom(3);
+var r = irandom(3);
 switch(r) {
 case 0:
     sprite_index = Character1;

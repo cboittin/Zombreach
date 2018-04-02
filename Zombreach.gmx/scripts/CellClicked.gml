@@ -1,11 +1,11 @@
-cell = argument0;
-state = argument1.state;
+var cell = argument0;
+var state = argument1.state;
 
-character = state.activeCharacter;
+var character = state.activeCharacter;
 if(!instance_exists(state.activeCharacter))
     return 0;
-activeAction = state.actionMenu.activeAction;
-returnValue = noone;
+var activeAction = state.actionMenu.activeAction;
+var returnValue = noone;
 if(!instance_exists(activeAction)) {
     returnValue = MoveAction(character, cell);
 } else {
@@ -20,7 +20,7 @@ if(!instance_exists(activeAction)) {
 
 if(returnValue == global.RETURN_OK)
     NextCharacter(state);
-else
+else {
     switch(returnValue) {
     case noone: break;
     case global.RETURN_ERROR:
@@ -31,4 +31,5 @@ else
         break;
     default:
     }
+}
 

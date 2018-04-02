@@ -46,7 +46,7 @@ self.activeCharacter = party.characters[charIndex];
 self.activeCharacter.active = true;
 self.activeCharacterIndex = 0;
 
-InitializeActionMenu(self.actionMenu, self);
+InitializeActionMenu(self);
 
 </string>
           </argument>
