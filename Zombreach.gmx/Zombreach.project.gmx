@@ -48,9 +48,40 @@
       <sprite>sprites\Layout</sprite>
       <sprite>sprites\PassSprite</sprite>
       <sprite>sprites\StartButtonSprite</sprite>
+      <sprite>sprites\Throw1</sprite>
+      <sprite>sprites\Throw2</sprite>
+      <sprite>sprites\GrabSprite</sprite>
+      <sprite>sprites\Attack1</sprite>
+      <sprite>sprites\Attack2</sprite>
+      <sprite>sprites\Move1</sprite>
+      <sprite>sprites\Move2</sprite>
+      <sprite>sprites\Pass1</sprite>
+      <sprite>sprites\Pass2</sprite>
+      <sprite>sprites\Pickup1</sprite>
+      <sprite>sprites\Pickup2</sprite>
+      <sprite>sprites\Special1</sprite>
+      <sprite>sprites\Special2</sprite>
+      <sprites name="tiles">
+        <sprite>sprites\Tile1</sprite>
+        <sprite>sprites\Tile2</sprite>
+        <sprite>sprites\Tile3</sprite>
+        <sprite>sprites\Tile4</sprite>
+        <sprite>sprites\Tile5</sprite>
+        <sprite>sprites\Tile6</sprite>
+        <sprite>sprites\Tile7</sprite>
+        <sprite>sprites\Tile8</sprite>
+        <sprite>sprites\Tile9</sprite>
+        <sprite>sprites\Tile10</sprite>
+        <sprite>sprites\Tile11</sprite>
+        <sprite>sprites\Tile12</sprite>
+        <sprite>sprites\TileHome</sprite>
+        <sprite>sprites\TileSubway</sprite>
+        <sprite>sprites\TileSupermarket</sprite>
+      </sprites>
     </sprites>
     <sprites name="background">
-      <sprite>sprites\StreetBackGround</sprite>
+      <sprite>sprites\StreetBackground</sprite>
+      <sprite>sprites\WoodBackGround</sprite>
       <sprite>sprites\BinBaseSprite</sprite>
       <sprite>sprites\BinLidSprite</sprite>
       <sprite>sprites\GratingSprite</sprite>
@@ -58,6 +89,7 @@
       <sprite>sprites\CarGreen</sprite>
       <sprite>sprites\CarRed</sprite>
       <sprite>sprites\CarYellow</sprite>
+      <sprite>sprites\GrassBackground</sprite>
     </sprites>
     <sprites name="party">
       <sprite>sprites\EmptyPortrait</sprite>
@@ -80,9 +112,10 @@
     <sprites name="status">
       <sprite>sprites\HPSpriteSheet</sprite>
     </sprites>
-    <sprite>sprites\GrabSprite</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\BgLayout</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\AddCharacterToParty.gml</script>
@@ -96,6 +129,7 @@
       <script>scripts\PassAction.gml</script>
       <script>scripts\GrabAction.gml</script>
       <script>scripts\ThrowAction.gml</script>
+      <script>scripts\SpecialAction.gml</script>
     </scripts>
     <scripts name="fight">
       <script>scripts\CalculateNoise.gml</script>
@@ -110,10 +144,12 @@
       <script>scripts\SpawnProp.gml</script>
       <script>scripts\SpawnCharacterInFight.gml</script>
       <script>scripts\MoveCharacter.gml</script>
+      <script>scripts\TriggerHit.gml</script>
     </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\OutlineShader.shader</shader>
+    <shader type="GLSLES">shaders\GrayShader.shader</shader>
   </shaders>
   <objects name="objects">
     <object>objects\GameState</object>
@@ -123,6 +159,9 @@
       <object>objects\Pass</object>
       <object>objects\ActionBase</object>
       <object>objects\Grab</object>
+      <object>objects\Throw</object>
+      <object>objects\Special</object>
+      <object>objects\Move</object>
     </objects>
     <objects name="buttons">
       <object>objects\StartButton</object>
@@ -131,6 +170,11 @@
       <object>objects\Character</object>
       <object>objects\Zombie</object>
       <object>objects\CharacterBase</object>
+      <objects name="zombies">
+        <object>objects\CopZombie</object>
+        <object>objects\FireZombie</object>
+        <object>objects\RegularZombie</object>
+      </objects>
     </objects>
     <objects name="fight">
       <object>objects\FightGrid</object>
@@ -142,14 +186,14 @@
       <object>objects\AreaInfo</object>
     </objects>
     <objects name="weapons">
-      <object>objects\Weapon</object>
-      <object>objects\Fist</object>
-      <object>objects\ZombieFist</object>
-      <object>objects\Bow</object>
       <object>objects\Axe</object>
       <object>objects\Bat</object>
-      <object>objects\Pipe</object>
+      <object>objects\Bow</object>
+      <object>objects\Fist</object>
       <object>objects\Knife</object>
+      <object>objects\Pipe</object>
+      <object>objects\Weapon</object>
+      <object>objects\ZombieFist</object>
     </objects>
     <objects name="events">
       <object>objects\EventBase</object>
@@ -164,6 +208,7 @@
       <object>objects\Prop</object>
       <object>objects\WeaponProp</object>
       <object>objects\BowProp</object>
+      <object>objects\BatProp</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>999</depth>
   <persistent>0</persistent>
   <parentName>GameState</parentName>
@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.grid = instance_create(30, 0, FightGrid);
-self.actionMenu = instance_create(0, 280, ActionMenu);
-self.party = instance_create(310, 0, Party);
+            <string>self.grid = instance_create(47, 1, FightGrid);
+self.actionMenu = instance_create(2, 274, ActionMenu);
+self.party = instance_create(335, 2, Party);
 self.areaInfo = instance_create(0, 0, AreaInfo);
 
 self.grid.state = self;

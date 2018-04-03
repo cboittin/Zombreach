@@ -54,6 +54,7 @@ self.isDown = false;
 
 // Weapon
 self.weapon = instance_create(0, 0, Fist);
+self.weapon.character = self;
 
 </string>
           </argument>

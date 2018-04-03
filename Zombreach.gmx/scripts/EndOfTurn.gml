@@ -15,4 +15,5 @@ for(var i = 0; i < ds_list_size(state.npcs); i += 1) {
 
 state.activeCharacter = state.party.characters[0];
 state.activeCharacterIndex = 0;
+InitializeActionMenu(state);
 

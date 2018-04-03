@@ -27,6 +27,38 @@
             <kind>1</kind>
             <string>self.actionName = "none";
 self.actionPanel = noone;
+self.activeSprite = noone;
+self.inactiveSprite = noone;
+self.active = false;
+self.disabled = true;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(self.active == true)
+    sprite_index = self.activeSprite;
+else
+    sprite_index = self.inactiveSprite;
+
 </string>
           </argument>
         </arguments>
@@ -49,7 +81,41 @@ self.actionPanel = noone;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.actionPanel.activeAction = self.actionName;
+            <string>if(self.disabled == false) {
+    self.actionPanel.activeAction.active = false;
+    self.actionPanel.activeAction = self;
+    self.active = true;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(self.disabled == true) {
+    shader_set(GrayShader);
+    draw_self();
+    shader_reset();
+} else
+    draw_self();
+
 </string>
           </argument>
         </arguments>

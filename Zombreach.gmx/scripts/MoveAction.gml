@@ -26,6 +26,6 @@ with(character) {
     if(tooFar)
         return global.OUT_OF_RANGE;
 }
-character.hasMoves = true;
+character.hasMoved = true;
 return global.RETURN_OK;
 

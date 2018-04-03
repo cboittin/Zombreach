@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var cellW = sprite_get_width(CellSprite);
-var cellH = sprite_get_height(CellSprite);
+            <string>var cellW = 34;
+var cellH = 34;
 var cellX, cellY;
 self.hoveredCell = noone;
 
@@ -48,11 +48,11 @@ for(i = 0; i &lt; global.GRID_WIDTH; i += 1)
 }
 
 // Pathfinding
-self.pathfinder = mp_grid_create(30, 0, global.GRID_HEIGHT, global.GRID_WIDTH, 
-                          global.CELL_SIZE, global.CELL_SIZE); // FIXME grid position
+self.pathfinder = mp_grid_create(x, y, global.GRID_HEIGHT, global.GRID_WIDTH, 
+                          cellW, cellH);
 self.currentPath = path_add();
 path_set_kind(self.currentPath, 1);
-path_set_precision(self.currentPath, 8);
+path_set_precision(self.currentPath, 4);
 
 </string>
           </argument>

@@ -59,7 +59,7 @@ for(i = 0; i < areaInfo.nProps; i += 1) {
     }
     ds_list_add(positionsX, pX);
     ds_list_add(positionsY, pY);
-    var prop = instance_create(0, 0, BowProp);
+    var prop = instance_create(0, 0, BatProp);
     SpawnProp(prop, grid, pX, pY);
 }
 ds_list_destroy(positionsX);

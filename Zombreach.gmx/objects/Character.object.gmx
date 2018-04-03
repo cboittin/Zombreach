@@ -51,19 +51,20 @@ texelW = texture_get_texel_width(sprite_get_texture(sprite_index, 0));
 texelH = texture_get_texel_height(sprite_get_texture(sprite_index, 0));
 
 // Attributes
-self.hasMoved = false;
 self.active = false;
 self.hp = 2;
-self.weapon = instance_create(0, 0, Fist);
 self.characterType = global.CH_PLAYABLE;
+
+// Weapon
+self.weapon = instance_create(0, 0, Fist);
+self.weapon.character = self;
 
 //Portrait
 self.portrait = instance_create(0, 0, CharacterPortrait);
 
 // Actions
-self.actions = ds_list_create();
-ds_list_add(self.actions, Attack);
-ds_list_add(self.actions, Pass);
+self.defaultAction = Move;
+
 </string>
           </argument>
         </arguments>
@@ -86,8 +87,7 @@ ds_list_add(self.actions, Pass);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ds_list_destroy(self.actions);
-path_delete(self.path);
+            <string>path_delete(self.path);
 </string>
           </argument>
         </arguments>

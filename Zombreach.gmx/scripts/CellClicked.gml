@@ -6,16 +6,22 @@ if(!instance_exists(state.activeCharacter))
     return 0;
 var activeAction = state.actionMenu.activeAction;
 var returnValue = noone;
-if(!instance_exists(activeAction)) {
+
+switch(activeAction.actionName) {
+case "move":
     returnValue = MoveAction(character, cell);
-} else {
-    switch(activeAction) {
-    case "attack":
-        returnValue = AttackAction(character, cell);
-        break;
-    default:
-        show_debug_message("CellClicked : action not recognized");
-    }
+    break;
+case "attack":
+    returnValue = AttackAction(character, cell);
+    break;
+case "throw":
+    returnValue = ThrowAction(character, cell);
+    break;
+case "special":
+    returnValue = SpecialAction(character, cell);
+    break;
+default:
+    show_debug_message("CellClicked : action not recognized");
 }
 
 if(returnValue == global.RETURN_OK)

@@ -29,6 +29,7 @@
 self.damage = 1;
 self.range = 1;
 self.rangeType = global.RANGE_MELEE;
+self.weaponType = global.WEAPON_FIST;
 
 </string>
           </argument>

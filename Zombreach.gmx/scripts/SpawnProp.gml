@@ -5,7 +5,7 @@ var cy = argument3;
 
 var cell = grid.cells[cx, cy];
 cell.prop = prop;
-prop.x = cell.centerX;
-prop.y = cell.centerY;
+prop.x = cell.x;
+prop.y = cell.y;
 prop.cell = cell;
 

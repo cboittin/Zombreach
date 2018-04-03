@@ -27,12 +27,16 @@
             <kind>1</kind>
             <string>self.cell = noone;
 self.hp = 1;
+self.strength = 1;
 self.hovered = false;
 self.movement = 3;
 self.weapon = noone;
 self.characterType = noone;
 self.deadSprite = noone;
 self.dead = false;
+self.canMove = true;
+self.hasMoved = false;
+self.canAttack = true;
 
 self.path = path_add();
 path_set_kind(self.path, 0);
@@ -66,9 +70,10 @@ u_outlineColor = shader_get_uniform(OutlineShader, "outlineColor");
           <argument>
             <kind>1</kind>
             <string>if(self.dead == true) {
-    if(instance_exists(self.deadSprite)) {
+    if(self.deadSprite != noone) {
         sprite_index = self.deadSprite;
     } else {
+        instance_destroy(self.weapon);
         instance_destroy();
     }
 }

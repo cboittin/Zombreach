@@ -25,32 +25,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.actions = ds_list_create();
+            <string>self.activeAction = noone;
 
-self.activeAction = noone;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="1" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>ds_list_destroy(self.actions);
+self.moveAction = instance_create(x, y, Move);
+self.attackAction = instance_create(x+53, y, Attack);
+self.throwAction = instance_create(x+106, y, Throw);
+self.grabAction = instance_create(x+159, y, Grab);
+self.specialAction = instance_create(x+212, y, Special);
+self.passAction = instance_create(x+265, y, Pass);
+
+self.moveAction.actionPanel = self;
+self.attackAction.actionPanel = self;
+self.throwAction.actionPanel = self;
+self.grabAction.actionPanel = self;
+self.specialAction.actionPanel = self;
+self.passAction.actionPanel = self;
+
 </string>
           </argument>
         </arguments>

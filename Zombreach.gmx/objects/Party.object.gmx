@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.partySlot[0] = instance_create(x + 26, 36, PartySlot);
-self.partySlot[1] = instance_create(x + 26, 108, PartySlot);
-self.partySlot[2] = instance_create(x + 26, 180, PartySlot);
-self.partySlot[3] = instance_create(x + 26, 252, PartySlot);
+            <string>self.partySlot[0] = instance_create(x, 36, PartySlot);
+self.partySlot[1] = instance_create(x, 108, PartySlot);
+self.partySlot[2] = instance_create(x, 180, PartySlot);
+self.partySlot[3] = instance_create(x, 252, PartySlot);
 
 var c1 = instance_create(0, 0, Character);
 self.partySlot[0].character = c1;
