@@ -9,3 +9,12 @@ prop.x = cell.x;
 prop.y = cell.y;
 prop.cell = cell;
 
+if(prop.occupiedCells & global.CELL_RIGHT)
+    grid.cells[cx + 1, cy].prop = prop;
+if(prop.occupiedCells & global.CELL_LEFT)
+    grid.cells[cx - 1, cy].prop = prop;
+if(prop.occupiedCells & global.CELL_BOTTOM)
+    grid.cells[cx, cy + 1].prop = prop;
+if(prop.occupiedCells & global.CELL_TOP)
+    grid.cells[cx, cy - 1].prop = prop;
+

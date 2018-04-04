@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>event_inherited();
 self.weapon = Bat;
+self.occupiedCells = global.CELL_RIGHT;
+
 </string>
           </argument>
         </arguments>

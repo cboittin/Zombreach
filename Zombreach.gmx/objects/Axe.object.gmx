@@ -30,6 +30,7 @@ self.damage = 2;
 self.range = 1;
 self.rangeType = global.RANGE_MELEE;
 self.weaponType = global.WEAPON_THROWABLE | global.WEAPON_USE_STRENGTH;
+self.occupiedCells = global.CELL_RIGHT;
 
 </string>
           </argument>

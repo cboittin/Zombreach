@@ -163,6 +163,8 @@
       <script>scripts\MoveCharacter.gml</script>
       <script>scripts\TriggerHit.gml</script>
     </scripts>
+    <script>scripts\GenerateProp.gml</script>
+    <script>scripts\AddTuple.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\OutlineShader.shader</shader>
@@ -226,7 +228,11 @@
       <object>objects\WeaponProp</object>
       <object>objects\BowProp</object>
       <object>objects\BatProp</object>
+      <object>objects\PipeProp</object>
+      <object>objects\KnifeProp</object>
+      <object>objects\AxeProp</object>
     </objects>
+    <object>objects\Tuple</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\MainMenu</room>

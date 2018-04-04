@@ -28,6 +28,8 @@
             <string>self.action = noone;
 self.cell = noone;
 self.propType = -1;
+self.occupiedCells = 0;
+
 </string>
           </argument>
         </arguments>

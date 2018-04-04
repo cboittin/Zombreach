@@ -55,6 +55,12 @@ global.PROP_USABLE = 8;
 global.PROP_DESTRUCTIBLE = global.PROP_FURNITURE;
 global.PROP_GRABBABLE = global.PROP_WEAPON | global.PROP_COLLECTIBLE;
 
+// Cells
+global.CELL_TOP = 1;
+global.CELL_LEFT = 2;
+global.CELL_RIGHT = 4;
+global.CELL_BOTTOM = 8;
+
 // Weapon types
 global.WEAPON_REGULAR = 0;
 global.WEAPON_FIST = 1;
