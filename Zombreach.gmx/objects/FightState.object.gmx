@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>self.grid = instance_create(47, 1, FightGrid);
 self.actionMenu = instance_create(2, 274, ActionMenu);
-self.party = instance_create(335, 2, Party);
+self.party = instance_create(320, 2, Party);
 self.areaInfo = instance_create(0, 0, AreaInfo);
 
 self.grid.state = self;

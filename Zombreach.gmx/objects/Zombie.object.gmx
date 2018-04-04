@@ -53,7 +53,7 @@ self.characterType = global.CH_ZOMBIE;
 self.isDown = false;
 
 // Weapon
-self.weapon = instance_create(0, 0, Fist);
+self.weapon = instance_create(0, 0, ZombieFist);
 self.weapon.character = self;
 
 </string>

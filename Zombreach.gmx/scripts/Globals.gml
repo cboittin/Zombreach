@@ -60,4 +60,5 @@ global.WEAPON_REGULAR = 0;
 global.WEAPON_FIST = 1;
 global.WEAPON_THROWABLE = 2;
 global.WEAPON_USE_AMMO = 4;
+global.WEAPON_USE_STRENGTH = 8;
 

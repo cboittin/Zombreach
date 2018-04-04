@@ -5,6 +5,9 @@ var weapon = character.weapon;
 if(!RangeCheck(character.cell, targetCell, weapon.range, weapon.rangeType))
     return global.OUT_OF_RANGE;
 
-TriggerHit(character, targetCell, weapon.damage);
+var damage = weapon.damage;
+if(weapon.weaponType & global.WEAPON_USE_STRENGTH)
+    damage += character.strength;
+TriggerHit(character, targetCell, damage);
 return global.RETURN_OK;
 

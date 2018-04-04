@@ -25,29 +25,41 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.partySlot[0] = instance_create(x, 36, PartySlot);
-self.partySlot[1] = instance_create(x, 108, PartySlot);
-self.partySlot[2] = instance_create(x, 180, PartySlot);
-self.partySlot[3] = instance_create(x, 252, PartySlot);
+            <string>self.partySlot[0] = instance_create(x+2, 2, PartySlot);
+self.partySlot[1] = instance_create(x+2, 70, PartySlot);
+self.partySlot[2] = instance_create(x+2, 138, PartySlot);
+self.partySlot[3] = instance_create(x+2, 206, PartySlot);
 
 var c1 = instance_create(0, 0, Character);
 self.partySlot[0].character = c1;
 var c2 = instance_create(0, 0, Character);
 self.partySlot[1].character = c2;
+var c3 = instance_create(0, 0, Character);
+self.partySlot[2].character = c3;
+var c4 = instance_create(0, 0, Character);
+self.partySlot[2].character = c4;
 
 c1.portrait.x = self.partySlot[0].x
 c1.portrait.y = self.partySlot[0].y
 c2.portrait.x = self.partySlot[1].x
 c2.portrait.y = self.partySlot[1].y
+c3.portrait.x = self.partySlot[2].x
+c3.portrait.y = self.partySlot[2].y
+c4.portrait.x = self.partySlot[3].x
+c4.portrait.y = self.partySlot[3].y
 
 self.characters[0] = c1;
 self.characters[1] = c2;
-self.characters[2] = noone;
-self.characters[3] = noone;
+self.characters[2] = c3;
+self.characters[3] = c4;
 
-self.nCharacters = 2;
+self.nCharacters = 4;
 
-self.font = font_add("steelfis.ttf", 16, false, false, 32, 128);
+self.font = font_add("Pixel_Font.ttf", 24, false, false, 32, 128);
+self.partySlot[0].font = font;
+self.partySlot[1].font = font;
+self.partySlot[2].font = font;
+self.partySlot[3].font = font;
 
 </string>
           </argument>
@@ -138,7 +150,7 @@ for(var i = 0; i &lt; 4; i += 1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var curY = y;
+            <string>/*var curY = y;
 var curX = x + 10;
 draw_set_colour(c_black);
 draw_set_font(font);
@@ -149,7 +161,7 @@ for(var i = 0; i &lt; 4; i += 1) {
     }
     curY += 72;
 }
-texture_set_interpolation(false);
+texture_set_interpolation(false);*/
 </string>
           </argument>
         </arguments>

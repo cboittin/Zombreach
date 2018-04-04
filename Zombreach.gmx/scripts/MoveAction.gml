@@ -2,6 +2,10 @@ var character = argument0;
 var destination = argument1;
 
 with(character) {
+    if(self.hasMoved) {
+        return global.RETURN_ERROR;
+    }
+
     var pathfinder = destination.parent.pathfinder;
     
     // Easy checks

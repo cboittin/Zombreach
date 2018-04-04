@@ -28,7 +28,7 @@
             <string>event_inherited();
 self.damage = 1;
 self.range = 1;
-self.rangeType = global.RANGE_MELEE;
+self.rangeType = global.RANGE_MELEE | global.WEAPON_USE_STRENGTH;
 </string>
           </argument>
         </arguments>

@@ -17,3 +17,4 @@ if(victim.hp <= 0) {
         victim.dead = true;
     }
 }
+
