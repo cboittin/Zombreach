@@ -31,19 +31,19 @@
 var r = irandom(3);
 switch(r) {
 case 0:
-    sprite_index = Character1;
+    sprite_index = Character1Sprite;
     self.deadSprite = Character1Dead;
     break;
 case 1:
-    sprite_index = Character2;
+    sprite_index = Character2Sprite;
     self.deadSprite = Character2Dead;
     break;
 case 2:
-    sprite_index = Character3;
+    sprite_index = Character3Sprite;
     self.deadSprite = Character3Dead;
     break;
 case 3:
-    sprite_index = Character4;
+    sprite_index = Character4Sprite;
     self.deadSprite = Character4Dead;
     break;
 }

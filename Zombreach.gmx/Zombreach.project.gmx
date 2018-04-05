@@ -43,10 +43,10 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="characters">
-      <sprite>sprites\Character1</sprite>
-      <sprite>sprites\Character2</sprite>
-      <sprite>sprites\Character3</sprite>
-      <sprite>sprites\Character4</sprite>
+      <sprite>sprites\Character1Sprite</sprite>
+      <sprite>sprites\Character2Sprite</sprite>
+      <sprite>sprites\Character3Sprite</sprite>
+      <sprite>sprites\Character4Sprite</sprite>
       <sprite>sprites\Character1Dead</sprite>
       <sprite>sprites\Character2Dead</sprite>
       <sprite>sprites\Character3Dead</sprite>
@@ -193,6 +193,12 @@
         <object>objects\CopZombie</object>
         <object>objects\FireZombie</object>
         <object>objects\RegularZombie</object>
+      </objects>
+      <objects name="characters">
+        <object>objects\Character1</object>
+        <object>objects\Character2</object>
+        <object>objects\Character3</object>
+        <object>objects\Character4</object>
       </objects>
     </objects>
     <objects name="events">

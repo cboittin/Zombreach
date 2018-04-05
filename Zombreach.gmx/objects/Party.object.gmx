@@ -30,13 +30,13 @@ self.partySlot[1] = instance_create(x+2, 70, PartySlot);
 self.partySlot[2] = instance_create(x+2, 138, PartySlot);
 self.partySlot[3] = instance_create(x+2, 206, PartySlot);
 
-var c1 = instance_create(0, 0, Character);
+var c1 = instance_create(0, 0, Character1);
 self.partySlot[0].character = c1;
-var c2 = instance_create(0, 0, Character);
+var c2 = instance_create(0, 0, Character2);
 self.partySlot[1].character = c2;
-var c3 = instance_create(0, 0, Character);
+var c3 = instance_create(0, 0, Character3);
 self.partySlot[2].character = c3;
-var c4 = instance_create(0, 0, Character);
+var c4 = instance_create(0, 0, Character4);
 self.partySlot[2].character = c4;
 
 c1.portrait.x = self.partySlot[0].x

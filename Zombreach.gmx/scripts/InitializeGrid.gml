@@ -46,7 +46,15 @@ for(i = 0; i < areaInfo.nZombies; i += 1) {
         }
     }
     AddTuple(positions, zX, zY);
-    var zombie = instance_create(0, 0, Zombie);
+    
+    var zombie;
+    var r = irandom(2);
+    switch(r) {
+    case 0: zombie = instance_create(0, 0, RegularZombie); break;
+    case 1: zombie = instance_create(0, 0, FireZombie); break;
+    case 2: zombie = instance_create(0, 0, CopZombie); break;
+    }
+    
     SpawnCharacterInFight(zombie, grid, zX, zY);
     ds_list_add(state.npcs, zombie);
 }

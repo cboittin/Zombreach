@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>event_inherited();
 self.hp = 3;
+self.deadSprite = Zombie3Dead;
+self.normalSprite = Zombie3;
+sprite_index = self.normalSprite;
 
 </string>
           </argument>

@@ -33,7 +33,6 @@ case 2:  sprite_index = Face3; break;
 case 3:  sprite_index = Face4; break;
 }
 
-
 </string>
           </argument>
         </arguments>
