@@ -1,5 +1,6 @@
 var character = argument0;
 var destination = argument1;
+var state = argument2;
 
 with(character) {
     if(self.hasMoved) {
@@ -31,5 +32,6 @@ with(character) {
         return global.OUT_OF_RANGE;
 }
 character.hasMoved = true;
+ActionEnd(state);
 return global.RETURN_OK;
 

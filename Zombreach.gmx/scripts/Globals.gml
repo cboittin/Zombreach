@@ -17,6 +17,7 @@ global.CELL_SIZE = 35;
 // Status checks
 global.RETURN_OK = 0;
 global.RETURN_ERROR = 1;
+global.RETURN_UNAVAILABLE = 2;
 global.UNIT_EXISTS = -1;
 global.OUT_OF_RANGE = -2;
 

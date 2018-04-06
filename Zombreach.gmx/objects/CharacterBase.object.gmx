@@ -36,6 +36,7 @@ self.deadSprite = noone;
 self.dead = false;
 self.canMove = true;
 self.hasMoved = false;
+self.hasAttacked = false;
 self.canAttack = true;
 
 self.path = path_add();
@@ -46,6 +47,7 @@ u_outlineSize = shader_get_uniform(OutlineShader, "outlineSize");
 u_texelWidth = shader_get_uniform(OutlineShader, "texelWidth");
 u_texelHeight = shader_get_uniform(OutlineShader, "texelHeight");
 u_outlineColor = shader_get_uniform(OutlineShader, "outlineColor");
+
 
 </string>
           </argument>

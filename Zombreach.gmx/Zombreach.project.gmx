@@ -147,6 +147,7 @@
       <script>scripts\GrabAction.gml</script>
       <script>scripts\ThrowAction.gml</script>
       <script>scripts\SpecialAction.gml</script>
+      <script>scripts\ActionEnd.gml</script>
     </scripts>
     <scripts name="fight">
       <script>scripts\CalculateNoise.gml</script>

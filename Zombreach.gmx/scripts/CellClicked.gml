@@ -9,7 +9,7 @@ var returnValue = noone;
 
 switch(activeAction.actionName) {
 case "move":
-    returnValue = MoveAction(character, cell);
+    returnValue = MoveAction(character, cell, state);
     break;
 case "attack":
     returnValue = AttackAction(character, cell);
