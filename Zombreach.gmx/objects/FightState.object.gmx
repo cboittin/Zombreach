@@ -41,10 +41,11 @@ self.npcs = ds_list_create();
 
 InitializeGrid(self, self.areaInfo);
 
-self.charIndex = irandom(nActiveChars - 1);
+//var charIndex = irandom(nActiveChars - 1);
+var charIndex = 0;
 self.activeCharacter = party.characters[charIndex];
 self.activeCharacter.active = true;
-self.activeCharacterIndex = 0;
+self.activeCharacterIndex = charIndex;
 
 InitializeActionMenu(self);
 

@@ -61,6 +61,7 @@ self.weapon.character = self;
 
 //Portrait
 self.portrait = instance_create(0, 0, CharacterPortrait);
+self.portrait.character = self;
 
 // Actions
 self.defaultAction = Move;

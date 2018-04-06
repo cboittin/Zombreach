@@ -7,7 +7,7 @@ var prop = cell.prop;
 
 actionMenu.activeAction = actionMenu.moveAction;
 // Move action
-if(activeCharacter.canMove == true && character?hasMoved = false) {
+if(activeCharacter.canMove == true && activeCharacter.hasMoved = false) {
     actionMenu.moveAction.disabled = false;
     actionMenu.moveAction.active = true;
 } else {

@@ -1,5 +1,9 @@
 var character = argument0;
 var targetCell = argument1;
+var state = argument2;
+
+if(character.hasAttacked == true)
+    return global.RETURN_ERROR;
 
 if(!character.weapon.weaponType & global.WEAPON_THROWABLE)
     return global.RETURN_ERROR;
@@ -11,4 +15,6 @@ TriggerHit(character, targetCell, character.weapon.damage + character.strength);
 instance_destroy(character.weapon);
 character.weapon = instance_create(0, 0, Fist);
 character.weapon.character = character;
+character.hasAttacked = true;
+ActionEnd(state);
 

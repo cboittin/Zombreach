@@ -32,6 +32,48 @@ case 1:  sprite_index = Face2; break;
 case 2:  sprite_index = Face3; break;
 case 3:  sprite_index = Face4; break;
 }
+texelW = texture_get_texel_width(sprite_get_texture(sprite_index, 0));
+texelH = texture_get_texel_height(sprite_get_texture(sprite_index, 0));
+
+self.character = noone;
+
+u_outlineSize = shader_get_uniform(OutlineShader, "outlineSize");
+u_texelWidth = shader_get_uniform(OutlineShader, "texelWidth");
+u_texelHeight = shader_get_uniform(OutlineShader, "texelHeight");
+u_outlineColor = shader_get_uniform(OutlineShader, "outlineColor");
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(self.character.active == true) {
+    shader_set(OutlineShader);
+    shader_set_uniform_f(u_texelWidth, texelW);
+    shader_set_uniform_f(u_texelHeight, texelH);
+    shader_set_uniform_f(u_outlineSize, 1.0);
+    shader_set_uniform_f_array(u_outlineColor, global.yOutline);
+    draw_self();
+    shader_reset();
+} else
+    draw_self();
 
 </string>
           </argument>

@@ -15,6 +15,7 @@ for(var i = 0; i < ds_list_size(state.npcs); i += 1) {
 
 for(i = 0; i < state.party.nCharacters; i += 1) {
     state.party.characters[i].hasMoved = false;
+    state.party.characters[i].hasAttacked = false;
 }
 
 state.activeCharacter = state.party.characters[0];
