@@ -5,8 +5,8 @@ var cy = argument3;
 
 var cell = grid.cells[cx, cy];
 cell.prop = prop;
-prop.x = cell.x;
-prop.y = cell.y;
+prop.x = cell.x + 1;
+prop.y = cell.y + 1;
 prop.cell = cell;
 
 if(prop.occupiedCells & global.CELL_RIGHT)

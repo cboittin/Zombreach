@@ -18,7 +18,14 @@ for(i = 0; i < state.party.nCharacters; i += 1) {
     state.party.characters[i].hasAttacked = false;
 }
 
-state.activeCharacter = state.party.characters[0];
 state.activeCharacterIndex = 0;
+state.activeCharacter = state.party.characters[0];
+while(state.activeCharacter.dead == true) {
+    state.activeCharacterIndex += 1;
+    state.activeCharacter = state.party.characters[state.activeCharacterIndex];
+    if(state.activeCharacterIndex > state.nActiveChars)
+        return global.RETURN_ERROR;
+}
+state.activeCharacter.active = true;
 InitializeActionMenu(state);
-
+return global.RETURN_OK;

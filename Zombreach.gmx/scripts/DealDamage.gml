@@ -15,6 +15,8 @@ if(victim.hp <= 0) {
     } else {
         // Kill the character
         victim.dead = true;
+        if(victim.characterType == global.CH_PLAYABLE)
+            CharacterDeath(victim);
     }
 }
 

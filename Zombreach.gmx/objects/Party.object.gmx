@@ -37,7 +37,7 @@ self.partySlot[1].character = c2;
 var c3 = instance_create(0, 0, Character3);
 self.partySlot[2].character = c3;
 var c4 = instance_create(0, 0, Character4);
-self.partySlot[2].character = c4;
+self.partySlot[3].character = c4;
 
 c1.portrait.x = self.partySlot[0].x
 c1.portrait.y = self.partySlot[0].y

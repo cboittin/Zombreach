@@ -137,6 +137,8 @@
   <scripts name="scripts">
     <script>scripts\AddCharacterToParty.gml</script>
     <script>scripts\AddProp.gml</script>
+    <script>scripts\AddTuple.gml</script>
+    <script>scripts\GenerateProp.gml</script>
     <script>scripts\Globals.gml</script>
     <script>scripts\IsAligned.gml</script>
     <script>scripts\ManhattanDistance.gml</script>
@@ -164,8 +166,7 @@
       <script>scripts\MoveCharacter.gml</script>
       <script>scripts\TriggerHit.gml</script>
     </scripts>
-    <script>scripts\GenerateProp.gml</script>
-    <script>scripts\AddTuple.gml</script>
+    <script>scripts\CharacterDeath.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\OutlineShader.shader</shader>

@@ -7,7 +7,7 @@ var prop = cell.prop;
 
 actionMenu.activeAction = actionMenu.moveAction;
 // Move action
-if(activeCharacter.canMove == true && activeCharacter.hasMoved = false) {
+if(activeCharacter.canMove == true && activeCharacter.hasMoved == false) {
     actionMenu.moveAction.disabled = false;
     actionMenu.moveAction.active = true;
 } else {
@@ -16,12 +16,13 @@ if(activeCharacter.canMove == true && activeCharacter.hasMoved = false) {
     actionMenu.moveAction.active = false;
 }
 // Attack action
-if(activeCharacter.canAttack == true)
+if(activeCharacter.canAttack == true && activeCharacter.hasAttacked == false)
     actionMenu.attackAction.disabled = false;
 else
     actionMenu.attackAction.disabled = true;
 // Throw action
-if(activeCharacter.weapon.weaponType & global.WEAPON_THROWABLE)
+if(activeCharacter.weapon.weaponType & global.WEAPON_THROWABLE && 
+        activeCharacter.canAttack == true && activeCharacter.hasAttacked == false)
     actionMenu.throwAction.disabled = false;
 else
     actionMenu.throwAction.disabled = true;

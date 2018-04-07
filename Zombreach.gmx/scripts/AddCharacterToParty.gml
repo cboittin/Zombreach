@@ -6,6 +6,6 @@ var index = state.nActiveCharacters + 1;
 if(index <= 3) {
     party.characters[index] = character;
     party.nCharacters += 1;
-    //nActiveChars += 1;
+    state.nActiveChars += 1;
 }
 

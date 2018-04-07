@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -72,6 +72,7 @@ u_outlineColor = shader_get_uniform(OutlineShader, "outlineColor");
           <argument>
             <kind>1</kind>
             <string>if(self.dead == true) {
+    instance_destroy(self.weapon);
     if(self.deadSprite != noone) {
         sprite_index = self.deadSprite;
     } else {

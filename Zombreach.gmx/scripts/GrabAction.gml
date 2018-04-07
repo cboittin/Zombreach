@@ -18,6 +18,9 @@ if(prop.propType & global.PROP_WEAPON) {
 // instance_destroy(prop) FIXME we probably have some kind of resources as props, which will need to get destroyed
 cell.prop = noone;
 
-NextCharacter(state);
+// Activate throw action if available
+InitializeActionMenu(state);
+
+ActionEnd(state);
 return global.RETURN_OK;
 

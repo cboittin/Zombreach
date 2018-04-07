@@ -32,6 +32,8 @@ with(character) {
         return global.OUT_OF_RANGE;
 }
 character.hasMoved = true;
+// Check for grab and special action
+InitializeActionMenu(state);
 ActionEnd(state);
 return global.RETURN_OK;
 
