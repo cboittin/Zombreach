@@ -29,6 +29,7 @@
 self.damage = 1;
 self.range = 10;
 self.rangeType = global.RANGE_LINE;
+self.noise = 4;
 
 </string>
           </argument>

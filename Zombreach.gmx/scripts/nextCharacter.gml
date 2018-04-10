@@ -1,8 +1,10 @@
 var state = argument0;
 
-state.activeCharacter.active = false;
+var currentCharacter = state.activeCharacter;
+if(currentCharacter != noone)
+    currentCharacter.active = false;
 state.activeCharacter = noone;
-do {
+/*do {
     state.activeCharacterIndex += 1;
     if(state.activeCharacterIndex >= state.nActiveChars) {
         return EndOfTurn(state);
@@ -12,6 +14,12 @@ do {
 } until(state.activeCharacter.dead == false);
 state.activeCharacter.active = true;
 state.actionMenu.activeAction = noone;
+*/
 
-InitializeActionMenu(state);
+var nextActive = UpdateTurnOrder(state);
+if(nextActive.characterType == global.CH_PLAYABLE) {
+    TurnBegin(state, nextActive);
+} else {
+    PlayNPC(state, nextActive);
+}
 

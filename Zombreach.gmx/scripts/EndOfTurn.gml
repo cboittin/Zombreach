@@ -1,7 +1,7 @@
 var state = argument0;
 
 CalculateNoise(state);
-PlayNPCs(state);
+//PlayNPCs(state);
 
 for(var i = 0; i < ds_list_size(state.npcs); i += 1) {
     var npc = ds_list_find_value(state.npcs, i);

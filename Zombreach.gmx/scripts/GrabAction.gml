@@ -21,6 +21,10 @@ cell.prop = noone;
 // Activate throw action if available
 InitializeActionMenu(state);
 
+// Noise
+state.noise += 1;
+cell.noise += 1;
+
 ActionEnd(state);
 return global.RETURN_OK;
 

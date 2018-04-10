@@ -1,0 +1,3 @@
+var character = argument0;
+
+

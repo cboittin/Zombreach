@@ -29,6 +29,8 @@
 self.damage = 1;
 self.range = 1;
 self.rangeType = global.RANGE_MELEE | global.WEAPON_USE_STRENGTH;
+self.noise = 12;
+
 </string>
           </argument>
         </arguments>

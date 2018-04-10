@@ -29,6 +29,7 @@
 sprite_index = Character1Sprite;
 self.deadSprite = Character1Dead;
 self.portrait.sprite_index = Face1;
+self.turnOrderPortrait = Face1Mini;
 
 </string>
           </argument>

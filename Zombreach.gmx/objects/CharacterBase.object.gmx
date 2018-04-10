@@ -25,20 +25,26 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.cell = noone;
+            <string>// Attributes
 self.hp = 1;
 self.strength = 1;
-self.hovered = false;
+self.initiative = 5;
+self.noise = 5;
 self.movement = 3;
 self.weapon = noone;
 self.characterType = noone;
-self.deadSprite = noone;
+self.cell = noone;
+
 self.dead = false;
 self.canMove = true;
 self.hasMoved = false;
 self.hasAttacked = false;
 self.canAttack = true;
 
+self.deadSprite = noone;
+self.hovered = false;
+
+// Pathfinding
 self.path = path_add();
 path_set_kind(self.path, 0);
 
@@ -48,6 +54,8 @@ u_texelWidth = shader_get_uniform(OutlineShader, "texelWidth");
 u_texelHeight = shader_get_uniform(OutlineShader, "texelHeight");
 u_outlineColor = shader_get_uniform(OutlineShader, "outlineColor");
 
+// Turn order portrait
+self.turnOrderPortrait = noone;
 
 </string>
           </argument>
@@ -78,8 +86,10 @@ u_outlineColor = shader_get_uniform(OutlineShader, "outlineColor");
     } else {
         instance_destroy(self.weapon);
         instance_destroy();
+        RecalculateTurnOrder(self.cell.grid.state);
     }
 }
+
 </string>
           </argument>
         </arguments>

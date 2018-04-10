@@ -43,7 +43,7 @@ for(i = 0; i &lt; global.GRID_WIDTH; i += 1)
         cells[i, j] = cell;
         cell.indexX = i;
         cell.indexY = j;
-        cell.parent = self;
+        cell.grid = self;
     }
 }
 

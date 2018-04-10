@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>self.character = noone;
-self.font = noone;
 
 </string>
           </argument>
@@ -54,7 +53,7 @@ self.font = noone;
 
 // Character info
 draw_set_colour(c_black);
-draw_set_font(font);
+draw_set_font(global.pixelFont);
 //texture_set_interpolation(true);
 if(instance_exists(character)) {
     draw_text(x + 55, y, "HP : " + string(character.hp));

@@ -55,12 +55,6 @@ self.characters[3] = c4;
 
 self.nCharacters = 4;
 
-self.font = font_add("Pixel_Font.ttf", 24, false, false, 32, 128);
-self.partySlot[0].font = font;
-self.partySlot[1].font = font;
-self.partySlot[2].font = font;
-self.partySlot[3].font = font;
-
 </string>
           </argument>
         </arguments>

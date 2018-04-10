@@ -27,6 +27,12 @@
             <kind>1</kind>
             <string>event_inherited();
 
+// Attributes
+self.active = false;
+self.hp = 2;
+self.initiative = 6;
+self.characterType = global.CH_PLAYABLE;
+
 // Sprite
 var r = irandom(3);
 switch(r) {
@@ -50,18 +56,13 @@ case 3:
 texelW = texture_get_texel_width(sprite_get_texture(sprite_index, 0));
 texelH = texture_get_texel_height(sprite_get_texture(sprite_index, 0));
 
-// Attributes
-self.active = false;
-self.hp = 2;
-self.characterType = global.CH_PLAYABLE;
+//Portrait
+self.portrait = instance_create(0, 0, CharacterPortrait);
+self.portrait.character = self;
 
 // Weapon
 self.weapon = instance_create(0, 0, Fist);
 self.weapon.character = self;
-
-//Portrait
-self.portrait = instance_create(0, 0, CharacterPortrait);
-self.portrait.character = self;
 
 // Actions
 self.defaultAction = Move;

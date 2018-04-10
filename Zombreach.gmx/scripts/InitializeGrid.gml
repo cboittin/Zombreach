@@ -109,3 +109,5 @@ for(i = 0; i < areaInfo.nProps; i += 1) {
 }
 ds_list_destroy(positions);
 
+RecalculateTurnOrder(state);
+

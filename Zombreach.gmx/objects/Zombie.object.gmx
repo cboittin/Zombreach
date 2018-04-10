@@ -51,6 +51,7 @@ texelH = texture_get_texel_height(sprite_get_texture(sprite_index, 0));
 // Attributes
 self.characterType = global.CH_ZOMBIE;
 self.isDown = false;
+self.noise = 8;
 
 // Weapon
 self.weapon = instance_create(0, 0, ZombieFist);

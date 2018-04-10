@@ -1,3 +1,6 @@
+// Fonts
+global.pixelFont = font_add("Pixel_Font.ttf", 24, false, false, 32, 128);
+
 // Colors
 global.yOutline[0] = 0.9;
 global.yOutline[1] = 0.9;
@@ -13,6 +16,7 @@ global.rOutline[3] = 1;
 global.GRID_WIDTH = 8;
 global.GRID_HEIGHT = 8;
 global.CELL_SIZE = 35;
+global.TURN_ORDER_SLOTS = 10;
 
 // Status checks
 global.RETURN_OK = 0;

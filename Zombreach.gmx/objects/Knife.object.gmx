@@ -30,6 +30,7 @@ self.damage = 3;
 self.range = 1;
 self.rangeType = global.RANGE_MELEE;
 self.weaponType = global.WEAPON_THROWABLE;
+self.noise = 5;
 
 </string>
           </argument>

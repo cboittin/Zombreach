@@ -111,9 +111,13 @@
     <sprites name="party">
       <sprite>sprites\EmptyPortrait</sprite>
       <sprite>sprites\Face1</sprite>
+      <sprite>sprites\Face1Mini</sprite>
       <sprite>sprites\Face2</sprite>
+      <sprite>sprites\Face2Mini</sprite>
       <sprite>sprites\Face3</sprite>
+      <sprite>sprites\Face3Mini</sprite>
       <sprite>sprites\Face4</sprite>
+      <sprite>sprites\Face4Mini</sprite>
     </sprites>
     <sprites name="weapons">
       <sprite>sprites\AxeEquipped</sprite>
@@ -154,19 +158,23 @@
     <scripts name="fight">
       <script>scripts\CalculateNoise.gml</script>
       <script>scripts\CellClicked.gml</script>
+      <script>scripts\CharacterDeath.gml</script>
       <script>scripts\DealDamage.gml</script>
+      <script>scripts\EndOfFight.gml</script>
       <script>scripts\EndOfTurn.gml</script>
       <script>scripts\InitializeActionMenu.gml</script>
       <script>scripts\InitializeGrid.gml</script>
+      <script>scripts\MoveCharacter.gml</script>
       <script>scripts\NextCharacter.gml</script>
-      <script>scripts\PlayNPCs.gml</script>
+      <script>scripts\PlayNPC.gml</script>
       <script>scripts\RangeCheck.gml</script>
+      <script>scripts\RecalculateTurnOrder.gml</script>
       <script>scripts\SpawnProp.gml</script>
       <script>scripts\SpawnCharacterInFight.gml</script>
-      <script>scripts\MoveCharacter.gml</script>
       <script>scripts\TriggerHit.gml</script>
+      <script>scripts\UpdateTurnOrder.gml</script>
+      <script>scripts\TurnBegin.gml</script>
     </scripts>
-    <script>scripts\CharacterDeath.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\OutlineShader.shader</shader>
@@ -208,10 +216,14 @@
       <object>objects\MovementEvent</object>
     </objects>
     <objects name="fight">
+      <object>objects\ActionMenu</object>
       <object>objects\FightGrid</object>
       <object>objects\FightGridCell</object>
-      <object>objects\ActionMenu</object>
       <object>objects\FightState</object>
+      <object>objects\Noise</object>
+      <object>objects\NoiseCounter</object>
+      <object>objects\TurnOrder</object>
+      <object>objects\TurnOrderPortrait</object>
     </objects>
     <objects name="world">
       <object>objects\AreaInfo</object>

@@ -30,6 +30,7 @@ self.range = 0;
 self.rangeType = noone;
 self.weaponType = global.WEAPON_REGULAR;
 self.character = noone;
+self.noise = 0;
 
 </string>
           </argument>

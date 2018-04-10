@@ -7,7 +7,9 @@ with(character) {
         return global.RETURN_ERROR;
     }
 
-    var pathfinder = destination.parent.pathfinder;
+    var distance = ManhattanDistance(cell, destination);
+    var grid = state.grid;
+    var pathfinder = grid.pathfinder;
     
     // Easy checks
     if(instance_exists(destination.unit))
@@ -22,8 +24,18 @@ with(character) {
         destination.centerX, destination.centerY, false);
     
     var tooFar = false;
-    if(pathExists && (path_get_length(path) / global.CELL_SIZE) <= movement) {
+    if(pathExists == true && (path_get_length(path) / global.CELL_SIZE) <= movement) {
         MoveCharacter(self, destination);
+        
+        // Noise
+        for(var i = 1; i < path_get_number(path); i += 1) {
+            var px = path_get_point_x(path, i) - grid.x;
+            var py = path_get_point_y(path, i) - grid.y;
+            var xIndex = floor(px / global.CELL_SIZE);
+            var yIndex = floor(py / global.CELL_SIZE);
+            grid.cells[xIndex, yIndex].noise += distance - 1;
+            state.noise += distance - 1;
+        }
     } else {
         tooFar = true;
     }

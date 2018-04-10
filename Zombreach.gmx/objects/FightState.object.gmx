@@ -25,28 +25,38 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.grid = instance_create(47, 1, FightGrid);
+            <string>// GUI
+self.grid = instance_create(47, 1, FightGrid);
 self.actionMenu = instance_create(2, 274, ActionMenu);
 self.party = instance_create(320, 2, Party);
-self.areaInfo = instance_create(0, 0, AreaInfo);
-
+self.noiseCounter = instance_create(0, 234, NoiseCounter);
+self.turnOrder = instance_create(0, 0, TurnOrder);
 self.grid.state = self;
 self.actionMenu.state = self;
 self.party.state = self;
+self.noiseCounter.state = self;
+self.turnOrder.state = self;
 
+// Objects
+self.areaInfo = instance_create(0, 0, AreaInfo);
+
+// Attributes
 self.nActiveChars = party.nCharacters;
 self.activeCharacter = noone;
 
 self.npcs = ds_list_create();
 
-InitializeGrid(self, self.areaInfo);
+self.noise = 0;
+self.noiseGrid = noone;
 
-//var charIndex = irandom(nActiveChars - 1);
+
+// Setup
 var charIndex = 0;
 self.activeCharacter = party.characters[charIndex];
 self.activeCharacter.active = true;
 self.activeCharacterIndex = charIndex;
 
+InitializeGrid(self, self.areaInfo);
 InitializeActionMenu(self);
 
 </string>
