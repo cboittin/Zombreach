@@ -26,10 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-self.damage = 1;
+self.damage = 0;
 self.range = 1;
-self.rangeType = global.RANGE_MELEE | global.WEAPON_USE_STRENGTH;
+self.weaponType = global.WEAPON_USE_STRENGTH | global.WEAPON_FIST;
+self.rangeType = global.RANGE_MELEE;
 self.noise = 12;
+self.name = "Fist";
 
 </string>
           </argument>

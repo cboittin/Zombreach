@@ -57,8 +57,7 @@ self.noise = 0;
             <string>if(instance_exists(self.character)) {
     x = self.character.x;
     y = self.character.y;
-} else
-    show_debug_message("WARNING : weapon not attached to character");
+}
 </string>
           </argument>
         </arguments>

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>self.nZombies = 5;
 self.nProps = 4;
-
+self.background = WoodBackground;
 </string>
           </argument>
         </arguments>

@@ -29,10 +29,10 @@ global.OUT_OF_RANGE = -2;
 global.RANGE_MANHATTAN = 1;
 global.RANGE_LINE = 2;
 global.RANGE_JUMP_1 = 4;
-global.RANGE_DISTANCE = global.RANGE_MANHATTAN | global.RANGE_LINE | global.RANGE_JUMP_1;
 global.RANGE_MELEE = 8;
 global.RANGE_SELF = 16;
 global.RANGE_SQUARE = 32;
+global.RANGE_DISTANCE = global.RANGE_MANHATTAN | global.RANGE_LINE | global.RANGE_JUMP_1;
 
 // Character types
 global.CH_PLAYABLE = 0;

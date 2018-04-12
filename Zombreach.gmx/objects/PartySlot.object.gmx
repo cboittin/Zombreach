@@ -52,13 +52,13 @@
             <string>//draw_self();
 
 // Character info
-draw_set_colour(c_black);
-draw_set_font(global.pixelFont);
-//texture_set_interpolation(true);
 if(instance_exists(character)) {
-    draw_text(x + 55, y, "HP : " + string(character.hp));
+    draw_set_colour(c_black);
+    draw_set_font(global.pixelFont);
+    //texture_set_interpolation(true);
+    draw_text(x + 55, y, "HP: " + string(character.hp));
+    //texture_set_interpolation(false);
 }
-//texture_set_interpolation(false);
 
 </string>
           </argument>

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>500</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -76,7 +76,7 @@ path_set_precision(self.currentPath, 4);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(self.hoveredCell)) {
+            <string>if(self.hoveredCell != noone) {
     var origin = self.state.activeCharacter;
     var destination = self.hoveredCell;
     if( !instance_exists(destination.unit)
@@ -115,7 +115,8 @@ path_set_precision(self.currentPath, 4);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(self.currentPath)) {
+            <string>draw_sprite(self.sprite_index, -1, x + 1, y + 1);
+if(instance_exists(self.currentPath)) {
     with(self.state.activeCharacter) {
         draw_path(other.currentPath, x, y, false);
     }

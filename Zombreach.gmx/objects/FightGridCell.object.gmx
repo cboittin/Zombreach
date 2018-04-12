@@ -60,6 +60,8 @@ self.prop = noone;
             <kind>1</kind>
             <string>if(self.grid.hoveredCell == self)
     self.grid.hoveredCell = noone;
+if(self.grid.state.cellInfo.cell == self)
+    self.grid.state.cellInfo.cell = noone;
 
 </string>
           </argument>
@@ -84,6 +86,7 @@ self.prop = noone;
           <argument>
             <kind>1</kind>
             <string>self.grid.hoveredCell = self;
+self.grid.state.cellInfo.cell = self;
 </string>
           </argument>
         </arguments>

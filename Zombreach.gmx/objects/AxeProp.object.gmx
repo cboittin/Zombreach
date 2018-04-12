@@ -3,7 +3,7 @@
   <spriteName>AxeSprite</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>10</depth>
   <persistent>0</persistent>
   <parentName>WeaponProp</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,8 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-self.weapon = Axe;
+self.weapon = instance_create(0, 0, Axe);
+self.weapon.visible = false;
 self.occupiedCells = global.CELL_RIGHT;
+self.name = "Axe";
 
 </string>
           </argument>

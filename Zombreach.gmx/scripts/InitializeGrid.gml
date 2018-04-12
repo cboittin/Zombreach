@@ -87,7 +87,7 @@ for(i = 0; i < areaInfo.nProps; i += 1) {
         
         for(var j = 0; j < ds_list_size(positions); j += 1) {
             var tupCheck = ds_list_find_value(positions, j);
-            if(pX == tupCheck[0] && pY == tupCheck[1]) {
+            if(CheckConflictPosition(positions, pX, pY, prop.occupiedCells) == false) {
                 valid = false;
                 break;
             }

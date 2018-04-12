@@ -3,7 +3,7 @@
   <spriteName>KnifeSprite</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>10</depth>
   <persistent>0</persistent>
   <parentName>WeaponProp</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,7 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-self.weapon = Knife;
+self.weapon = instance_create(0, 0, Knife);
+self.weapon.visible = false;
+self.name = "Knife";
 
 </string>
           </argument>

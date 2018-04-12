@@ -9,7 +9,8 @@ if(!instance_exists(prop) || !(prop.propType & global.PROP_GRABBABLE) )
 
 if(prop.propType & global.PROP_WEAPON) {
     instance_destroy(character.weapon);
-    character.weapon = instance_create(0, 0, prop.weapon);
+    character.weapon = prop.weapon;
+    character.weapon.visible = true;
     character.weapon.character = character;
     instance_destroy(prop);
 } else

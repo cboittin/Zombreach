@@ -32,6 +32,7 @@ self.rangeType = global.RANGE_MELEE;
 self.weaponType = global.WEAPON_THROWABLE | global.WEAPON_USE_STRENGTH;
 self.occupiedCells = global.CELL_RIGHT;
 self.noise = 15;
+self.name = "Axe";
 
 </string>
           </argument>

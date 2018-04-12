@@ -31,6 +31,7 @@ self.actionMenu = instance_create(2, 274, ActionMenu);
 self.party = instance_create(320, 2, Party);
 self.noiseCounter = instance_create(0, 234, NoiseCounter);
 self.turnOrder = instance_create(0, 0, TurnOrder);
+self.cellInfo = instance_create(320, 274, CellInfo);
 self.grid.state = self;
 self.actionMenu.state = self;
 self.party.state = self;
@@ -39,6 +40,7 @@ self.turnOrder.state = self;
 
 // Objects
 self.areaInfo = instance_create(0, 0, AreaInfo);
+self.grid.sprite_index = areaInfo.background;
 
 // Attributes
 self.nActiveChars = party.nCharacters;
@@ -51,12 +53,11 @@ self.noiseGrid = noone;
 
 
 // Setup
-var charIndex = 0;
-self.activeCharacter = party.characters[charIndex];
-self.activeCharacter.active = true;
-self.activeCharacterIndex = charIndex;
-
 InitializeGrid(self, self.areaInfo);
+
+self.activeCharacter = self.turnOrder.slots[| 0].unit;
+self.activeCharacter.active = true;
+
 InitializeActionMenu(self);
 
 </string>

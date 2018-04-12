@@ -98,7 +98,7 @@
     </sprites>
     <sprites name="background">
       <sprite>sprites\StreetBackground</sprite>
-      <sprite>sprites\WoodBackGround</sprite>
+      <sprite>sprites\WoodBackground</sprite>
       <sprite>sprites\BinBaseSprite</sprite>
       <sprite>sprites\BinLidSprite</sprite>
       <sprite>sprites\GratingSprite</sprite>
@@ -172,9 +172,10 @@
       <script>scripts\SpawnProp.gml</script>
       <script>scripts\SpawnCharacterInFight.gml</script>
       <script>scripts\TriggerHit.gml</script>
-      <script>scripts\UpdateTurnOrder.gml</script>
       <script>scripts\TurnBegin.gml</script>
+      <script>scripts\UpdateTurnOrder.gml</script>
     </scripts>
+    <script>scripts\CheckConflictPosition.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\OutlineShader.shader</shader>
@@ -224,6 +225,7 @@
       <object>objects\NoiseCounter</object>
       <object>objects\TurnOrder</object>
       <object>objects\TurnOrderPortrait</object>
+      <object>objects\CellInfo</object>
     </objects>
     <objects name="world">
       <object>objects\AreaInfo</object>

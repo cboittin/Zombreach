@@ -33,8 +33,8 @@ with(character) {
             var py = path_get_point_y(path, i) - grid.y;
             var xIndex = floor(px / global.CELL_SIZE);
             var yIndex = floor(py / global.CELL_SIZE);
-            grid.cells[xIndex, yIndex].noise += distance - 1;
-            state.noise += distance - 1;
+            grid.cells[xIndex, yIndex].noise += distance;
+            state.noise += distance;
         }
     } else {
         tooFar = true;

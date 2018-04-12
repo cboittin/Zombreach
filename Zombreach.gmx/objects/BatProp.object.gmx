@@ -26,8 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-self.weapon = Bat;
+self.weapon = instance_create(0, 0, Bat);
+self.weapon.visible = false;
 self.occupiedCells = global.CELL_RIGHT;
+self.name = "Bat";
 
 </string>
           </argument>

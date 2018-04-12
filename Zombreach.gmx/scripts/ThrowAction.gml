@@ -19,8 +19,8 @@ character.hasAttacked = true;
 
 // Noise
 character.cell.noise += 1;
-targetCell.noise += weapon.noise;
-state.noise += weapon.noise + 1;
+targetCell.noise += character.weapon.noise;
+state.noise += character.weapon.noise + 1;
 
 ActionEnd(state);
 return global.RETURN_OK;

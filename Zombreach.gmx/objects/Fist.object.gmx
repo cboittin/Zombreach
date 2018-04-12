@@ -31,6 +31,7 @@ self.range = 1;
 self.rangeType = global.RANGE_MELEE;
 self.weaponType = global.WEAPON_FIST | global.WEAPON_USE_STRENGTH;
 self.noise = 8;
+self.name = "Fist";
 
 </string>
           </argument>
