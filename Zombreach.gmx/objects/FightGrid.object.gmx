@@ -79,16 +79,56 @@ path_set_precision(self.currentPath, 4);
             <string>if(self.hoveredCell != noone) {
     var origin = self.state.activeCharacter;
     var destination = self.hoveredCell;
-    if( !instance_exists(destination.unit)
-            &amp;&amp; ManhattanDistance(origin.cell, destination) &lt;= origin.movement ) {
+    
+    if(self.state.actionMenu.activeAction == noone)
+        return global.RETURN_ERROR;
+    
+    var drawPath = false;
+    var pathType = 0;
+    var finalCheck = -1;
+    switch(self.state.actionMenu.activeAction.actionName) {
+    case "move":
+        drawPath = !instance_exists(destination.unit) &amp;&amp; 
+                    ManhattanDistance(origin.cell, destination) &lt;= origin.movement;
+        finalCheck = origin.movement;
+        break;
+    case "attack":
+        break;
+    case "throw": 
+        pathType = 1; // Direct path
+        drawPath = ManhattanDistance(origin.cell, destination) &lt;= origin.strength + 3;
+        break;
+    case "special":
+        break;
+    default:
+        return global.RETURN_ERROR;
+    }
+    
+    if(drawPath == true) {
         
-        mp_grid_clear_cell(self.pathfinder, origin.cell.indexX, origin.cell.indexY);
-        mp_grid_path(self.pathfinder, self.currentPath, origin.x, origin.y, 
-                destination.centerX, destination.centerY, false)
-        mp_grid_add_instances(self.pathfinder, origin, false);
+        if(pathType == 0) {
+            mp_grid_clear_cell(self.pathfinder, origin.cell.indexX, origin.cell.indexY);
+            var clearDest = false;
+            if(mp_grid_get_cell(self.pathfinder, destination.indexX, destination.indexY) == -1) {
+                mp_grid_clear_cell(self.pathfinder, destination.indexX, destination.indexY);
+                clearDest = true;
+            }
+            mp_grid_path(self.pathfinder, self.currentPath, origin.x, origin.y, 
+                    destination.centerX, destination.centerY, false);
+            mp_grid_add_instances(self.pathfinder, origin, false);
+            if(clearDest == true)
+                mp_grid_add_instances(self.pathfinder, destination, false);
+    
+            if(finalCheck != -1 &amp;&amp; 
+                    path_get_length(self.currentPath) / global.CELL_SIZE &gt; finalCheck)
+                path_clear_points(self.currentPath);  
+        } else if (pathType == 1) {
+            with(origin) {
+                mp_linear_path(other.currentPath, destination.centerX, destination.centerY, 
+                            5, false);
+            }
+        }
         
-        if(path_get_length(self.currentPath) / global.CELL_SIZE &gt; origin.movement)
-            path_clear_points(self.currentPath);  
     } else
         path_clear_points(self.currentPath);
 }

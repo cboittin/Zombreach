@@ -1,6 +1,8 @@
 var state = argument0;
 var character = state.activeCharacter;
 
+CheckEndFight(state);
+
 if(character.hasMoved && character.hasAttacked)
     NextCharacter(state); // We moved and attacked, switch to next character
 else {
